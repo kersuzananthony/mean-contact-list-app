@@ -1,0 +1,22 @@
+<!DOCTYPE>
+<html ng-app="contactApp">
+<head>
+    <title>Contact List App</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Contact List App</h1>
+    <div ui-view></div>
+</div>
+
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="lib/angular-messages/angular-messages.js"></script>
+<script src="app.js"></script>
+<script src="controllers/app.controller.js"></script>
+<script src="services/contact-list.service.js"></script>
+</body>
+</html>

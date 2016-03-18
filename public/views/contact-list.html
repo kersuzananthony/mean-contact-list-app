@@ -1,0 +1,36 @@
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Number</th>
+        <th>Actions</th>
+        <th>&nbsp;</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            <input type="text" class="form-control" ng-model="newContact.name" placeholder="Name">
+            <p class="text-danger" ng-if="errors.name">{{ errors.name.message }}</p>
+        </td>
+        <td>
+            <input type="text" class="form-control" ng-model="newContact.email" placeholder="Email">
+            <p class="text-danger" ng-if="errors.email">{{ errors.email.message }}</p>
+        </td>
+        <td>
+            <input type="text" class="form-control" ng-model="newContact.number" placeholder="Number">
+            <p class="text-danger" ng-if="errors.number">{{ errors.number.message }}</p>
+        </td>
+        <td><button class="btn btn-primary" ng-click="addContact()">Add Contact</button></td>
+        <td><button class="btn btn-info" ng-click="updateContact()">Update</button></td>
+    </tr>
+    <tr ng-repeat="contact in contacts">
+        <td>{{ contact.name }}</td>
+        <td>{{ contact.email }}</td>
+        <td>{{ contact.number }}</td>
+        <td><button class="btn btn-danger" ng-click="removeContact(contact._id)">Remove</button></td>
+        <td><button class="btn btn-warning" ng-click="editContact(contact._id)">Edit</button></td>
+    </tr>
+    </tbody>
+</table>
